@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+
+            var uluru = { lat: 28.09973, lng: -15.41343 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: uluru
+            });
+            var icon = "https://maps.google.com/mapfiles/kml/shapes/bus.png";
+            var marker = new google.maps.Marker({
+                position: uluru,
+                icon: icon,
+                title: "Parada 1",
+                map: map
+            });
+
+            marker.description = new google.maps.InfoWindow({
+                content: "Solo faltaria que cargara dinamicamente"+
+                        "todas las paradas de buses.. pero "+
+                        "como no hemos añadido persistencia a los datos solo mostramos"+
+                        "uno como ejemplo...seria tan facil como meter"+
+                        "todas las paradas en un JSON y aqui cargarlos"
+            });
+            google.maps.event.addListener(marker, 'click', function () {
+                this.description.setPosition(this.getPosition());
+                this.description.open(map); //map to display on
+            });
+            marker.setMap(map);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0hX8klvlYjzGqtHz1iNhl-wiTui6a6f0&callback=initMap">
+    </script>
+</body>
+
+</html>
