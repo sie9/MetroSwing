@@ -23,6 +23,11 @@ public class Linea {
     public Linea(String nombreLinea) {
         this.nombreLinea = nombreLinea;
         this.precioLinea = ""+    ((Math.random() * 10) + 1);
+        
+        for (int inci = (int) ((Math.random() * 3) + 1); inci<=3 ; inci++){
+            Incidencia incidencia = new Incidencia(inci);
+            incidenciasLinea.add(incidencia);
+        }
     }
     
     

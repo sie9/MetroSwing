@@ -227,6 +227,7 @@ public class Login extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new Main().setVisible(true);
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -244,6 +245,8 @@ public class Login extends javax.swing.JFrame {
             if (user.usuario.equals(usario)){
                 if( user.clave.equals( clave2 )) {
                     new PanelLoggedUser(user).setVisible(true);
+                    
+                    this.setVisible(false);
                     this.dispose();
                 }else{
                     System.out.println("Clave incorrecta");
@@ -263,6 +266,8 @@ public class Login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         new CreateUser(null,0).setVisible(true);
+        
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

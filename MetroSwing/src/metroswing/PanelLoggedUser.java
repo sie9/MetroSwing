@@ -188,6 +188,7 @@ public class PanelLoggedUser extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         new Login(usergen,3).setVisible(true);
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -212,6 +213,7 @@ public class PanelLoggedUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         new Login(usergen, 2).setVisible(true);
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -219,6 +221,7 @@ public class PanelLoggedUser extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         new CreateUser(usergen, 1).setVisible(true);
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

@@ -13,6 +13,10 @@ class Incidencia {
     public String descripcionIncidencia;
     public String codigoIncidencia;
 
+    
+    
+    
+
     public String getDescripcion() {
         return descripcionIncidencia;
     }
@@ -29,9 +33,9 @@ class Incidencia {
         this.codigoIncidencia = codigo;
     }
     
-    public Incidencia(String descripcion, String codigo) {
-        this.descripcionIncidencia = descripcion;
-        this.codigoIncidencia = codigo;
+    public Incidencia(int i) {
+        this.descripcionIncidencia = "Descripcion " + i;
+        this.codigoIncidencia = "Codigo "+i;
     }
     
     
